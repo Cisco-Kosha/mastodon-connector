@@ -360,76 +360,6 @@
                   "acct",
                   "display_name"
                 ]
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "username": {
-                    "type": "string"
-                  },
-                  "acct": {
-                    "type": "string"
-                  },
-                  "display_name": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "id",
-                  "username",
-                  "acct",
-                  "display_name"
-                ]
-              }
-            
-          },
-          "statuses": {
-            "type": "array",
-            "items": 
-              {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "created_at": {
-                    "type": "string"
-                  },
-                  "content": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "id",
-                  "created_at",
-                  "content"
-                ]
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "created_at": {
-                    "type": "string"
-                  },
-                  "spoiler_text": {
-                    "type": "string"
-                  },
-                  "content": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "id",
-                  "created_at",
-                  "spoiler_text",
-                  "content"
-                ]
               }
           },
           "hashtags": {
@@ -467,46 +397,6 @@
                         ]
                       }
                     
-                  }
-                },
-                "required": [
-                  "name",
-                  "url",
-                  "history"
-                ]
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "history": {
-                    "type": "array",
-                    "items": [
-                      {
-                        "type": "object",
-                        "properties": {
-                          "day": {
-                            "type": "string"
-                          },
-                          "uses": {
-                            "type": "string"
-                          },
-                          "accounts": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "day",
-                          "uses",
-                          "accounts"
-                        ]
-                      }
-                    ]
                   }
                 },
                 "required": [
@@ -806,21 +696,6 @@
                   "name",
                   "url"
                 ]
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "url": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "name",
-                  "url"
-                ]
               }
           
           },
@@ -944,7 +819,7 @@
           },
           "poll[expires_in]": {
             "type": "integer"
-          },
+          }
         }
       },
       "Account": {
@@ -1100,37 +975,37 @@
           "fields",
           "role"
         ]
-      },
+    },
       "AccountStatuses": {
-        "type": "array",
-        "items": 
-          {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string"
+          "type": "array",
+          "items": 
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "in_reply_to_id": {
+                  "type": "string"
+                },
+                "in_reply_to_account_id": {
+                  "type": "string"
+                },
+                "sensitive": {
+                  "type": "boolean"
+                }
               },
-              "created_at": {
-                "type": "string"
-              },
-              "in_reply_to_id": {
-                "type": "string"
-              },
-              "in_reply_to_account_id": {
-                "type": "string"
-              },
-              "sensitive": {
-                "type": "boolean"
-              }
-            },
-            "required": [
-              "id",
-              "created_at",
-              "in_reply_to_id",
-              "in_reply_to_account_id",
-              "sensitive"
-            ]
-          }
+              "required": [
+                "id",
+                "created_at",
+                "in_reply_to_id",
+                "in_reply_to_account_id",
+                "sensitive"
+              ]
+            }
       },
       "AccountFollowers": {
         "type": "array",
@@ -1157,32 +1032,9 @@
               "acct",
               "display_name"
             ]
-          },
-          {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "acct": {
-                "type": "string"
-              },
-              "display_name": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "id",
-              "username",
-              "acct",
-              "display_name"
-            ]
           }
       }
-      }
+    }
   },
   "externalDocs": {
     "description": "Find out more about Mastodon APIs",
