@@ -1,5 +1,6 @@
 {
   "version": "2.0.0",
+  "oauth2_provider_name": "mastodon",
   "fields": [
     {
       "field": "AUTH_TYPE",
