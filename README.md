@@ -33,10 +33,9 @@ Use the timelines API to get details about a user's timeline
 
 ## Authentication
 
-To authenticate when provisioning the Kosha Mastodon connector, you need your:
+Kosha uses OAuth 2.0 to connect to Mastodon. If you already have an application registered with Mastodon, you can use your client_id and client_secret when provisioning the connector.
 
-* Mastodon access token
-* Mastodon server URL
+If you don’t want to use those credentials when provisioning the Spotify connector, Kosha provides bootstrap credentials. After you sign in to your Mastodon app, Mastodon gives Kosha an access token and your connector is provisioned. Kosha automatically refreshes your access token before it expires to ensure there’s no disruption in use.
 
 ## Kosha Connector Open Source Development
 
